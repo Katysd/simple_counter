@@ -3,23 +3,25 @@ zm = 0;
 
 state = false;
 
+function upco() {
+	var segundos = zm; // Aquí iría tu variable que aumenta cada segundo
+	var horas = Math.floor(segundos / 3600);
+	var minutos = Math.floor((segundos % 3600) / 60);
+	var seg = segundos % 60;
+	var horasStr = (horas < 10) ? "0" + horas : horas;
+	var minutosStr = (minutos < 10) ? "0" + minutos : minutos;
+	var segStr = (seg < 10) ? "0" + seg : seg;
+	tim.textContent = horasStr + ":" + minutosStr + ":" + segStr;
+	document.title = tim.textContent;
+}
+
 setInterval(zmbe, 1000);
+setInterval(upco, 1);
 
 function zmbe() {
-	
 	if (state == true) {
 		zm += 1;
-		var segundos = zm; // Aquí iría tu variable que aumenta cada segundo
-		var horas = Math.floor(segundos / 3600);
-		var minutos = Math.floor((segundos % 3600) / 60);
-		var seg = segundos % 60;
-		var horasStr = (horas < 10) ? "0" + horas : horas;
-		var minutosStr = (minutos < 10) ? "0" + minutos : minutos;
-		var segStr = (seg < 10) ? "0" + seg : seg;
-		tim.textContent = horasStr + ":" + minutosStr + ":" + segStr;
-		document.title = tim.textContent;
 	}
-	
 }
 
 function dope() {
@@ -50,8 +52,6 @@ function truerest() {
 		dope();
 	}
 	zm = 0;
-	tim.textContent = "00:00:00";
-	document.title = tim.textContent;
 }
 
 function lap() {
