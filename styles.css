@@ -1,0 +1,118 @@
+:root {
+	--default: black;
+}
+
+* {
+	user-select: none;
+}
+
+body {
+	background-color: black;
+	margin: 0;
+}
+
+@font-face {
+	font-family: clock; src: url('clock.otf');
+} 
+
+.timer {
+	font-family: clock;
+	color: white;
+    font-size: 10em;
+	margin-left: 9px;
+}
+
+.wrap {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+	border: solid orange;
+    padding: 20px;
+}
+
+#change, #res {
+	width: calc(50% - 2px);
+    font-family: monospace;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 900;
+    border: solid 3px;
+    color: orange;
+    background: black;
+    transition: 0.2s;
+}
+
+#change:hover, #res:hover {
+	color: cyan;
+}
+
+#lap {
+	width: 100%;
+    font-family: monospace;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 900;
+    border: solid 3px;
+    color: orange;
+    background: black;
+    transition: 0.2s;
+}
+
+#lap:hover {
+	color: cyan;
+}
+
+#lapper {
+	border: solid;
+    color: orange;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    translate: -5px -50%;
+    width: 20em;
+    height: 95%;
+	overflow: auto;
+}
+
+.lape {
+	text-align: center;
+    font-family: 'clock';
+    font-size: 4em;
+    border-bottom: solid;
+}
+
+/* Chrome, Edge, and Safari */
+#lapper::-webkit-scrollbar {
+  width: 16px;
+  border-left: solid orange;
+}
+
+#lapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#lapper::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border-radius: 0px;
+  border: 3px solid orange;
+  border-right: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
