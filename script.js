@@ -48,9 +48,9 @@ function rest() {
 function truerest() {
 	if (state == true) {
 		dope();
-		tim.textContent = "00:00:00";
-		document.title = tim.textContent;
 	}
+	tim.textContent = "00:00:00";
+	document.title = tim.textContent;
 	zm = 0;
 }
 
