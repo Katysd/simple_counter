@@ -49,9 +49,9 @@ function truerest() {
 	if (state == true) {
 		dope();
 	}
+	zm = 0;
 	tim.textContent = "00:00:00";
 	document.title = tim.textContent;
-	zm = 0;
 }
 
 function lap() {
